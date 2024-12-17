@@ -9,7 +9,6 @@ public class Student {
     private String refresh_token;
     private int expires_in;
     private String token_type;
-    private String token;
     private String access_token;
 
 
@@ -53,12 +52,8 @@ public class Student {
         this.token_type = token_type;
     }
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
+    public String getAuthorization() {
+        return token_type + " "+  access_token;
     }
 
     public String getAccess_token() {
@@ -77,7 +72,6 @@ public class Student {
                 ", refresh_token='" + refresh_token + '\'' +
                 ", expires_in=" + expires_in +
                 ", token_type='" + token_type + '\'' +
-                ", token='" + token + '\'' +
                 ", access_token='" + access_token + '\'' +
                 '}';
     }

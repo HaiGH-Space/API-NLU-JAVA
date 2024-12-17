@@ -4,7 +4,6 @@ public class AIdName {
     private String ma;
     private String ten;
 
-
     public String getMa() {
         return ma;
     }
