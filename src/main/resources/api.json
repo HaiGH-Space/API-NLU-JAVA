@@ -1,0 +1,18 @@
+{
+  "root": "https://dkmh.hcmuaf.edu.vn",
+  "prefix": "/api/",
+  "getUrl": "web/w-geturlsaulogin",
+  "locThongTin": "/api/",
+  "login": "auth/login",
+  "loginPing": "api/auth/ping?_=${Math.random()}",
+  "getCurrentLogin": "auth/me",
+  "logOut": "auth/logout",
+  "getUserOnline": "web/w-locdsuseronline",
+  "locDsNhomTo": "dkmh/w-locdsnhomto",
+  "locSinhVienInfo": "dkmh/w-locsinhvieninfo",
+  "locGiangVienInfo": "hrm/w-locgiangvieninfo",
+  "locDsDiemSinhVien": "srm/w-locdsdiemsinhvien",
+  "locDsDieuKienLoc": "dkmh/w-locdsdieukienloc",
+  "locDsKQdkmhSinhVien": "dkmh/w-locdskqdkmhsinhvien",
+  "xuLydkmhSinhVien": "dkmh/w-xulydkmhsinhvien"
+}
