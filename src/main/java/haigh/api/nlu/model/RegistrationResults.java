@@ -66,7 +66,7 @@ public class RegistrationResults {
         this.to_hoc = to_hoc;
     }
 
-    class Group {
+    public class Group {
         private boolean enable;
         private String id_mon;
         private String id_to_hoc;

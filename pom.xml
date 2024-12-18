@@ -18,5 +18,11 @@
             <version>2.10.1</version>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>github</id> <!-- Tên ID của server -->
+            <url>https://maven.pkg.github.com/HaiGH-Space/API-NLU-JAVA</url>
+        </repository>
+    </distributionManagement>
 
 </project>

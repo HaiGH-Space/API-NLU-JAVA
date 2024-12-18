@@ -31,7 +31,7 @@ public class Test {
             Test danh sách kết quả các môn đã đăng ký
         */
       List<RegistrationResults> dsKetQuaDKMH =  api.dsKetQuaDKMH(sinh_vien.getAuthorization());
-
+        System.out.println(dsKetQuaDKMH);
         /*
             Test InformationCenter
         */
@@ -39,18 +39,19 @@ public class Test {
 
         List<Subject> dsMonHoc = informationCenter.getDs_mon_hoc();
         List<Group> dsNhomTo =  informationCenter.getDs_nhom_to();
+//        System.out.println(dsNhomTo);
 
-        String tenMonHoc = "Pháp luật đại cương";// Tên môn học muốn tìm
-        String maMonHoc = findIdSubject(tenMonHoc,dsMonHoc);// Tìm id theo tên môn học
-        List<Group> ds_nhom_to_mon_PLDC = findGroupBySubjectID(maMonHoc,tenMonHoc,dsNhomTo);
+//        String tenMonHoc = "Pháp luật đại cương";// Tên môn học muốn tìm
+//        String maMonHoc = findIdSubject(tenMonHoc,dsMonHoc);// Tìm id theo tên môn học
+//        List<Group> ds_nhom_to_mon_PLDC = findGroupBySubjectID(maMonHoc,tenMonHoc,dsNhomTo);
 
         /*
             Test đăng ký môn học
         */
         // Lấy id của 1 lớp để dki học, Lấy vị trí đầu tiên làm ví dụ
-        Group nhom_to_mon_PLDC = ds_nhom_to_mon_PLDC.get(0);
-        dkmh(nhom_to_mon_PLDC,sinh_vien.getAuthorization(),true);//true để dk
-        dkmh(nhom_to_mon_PLDC,sinh_vien.getAuthorization(),true);// false để hủy đk
+//        Group nhom_to_mon_PLDC = ds_nhom_to_mon_PLDC.get(0);
+//        dkmh(nhom_to_mon_PLDC,sinh_vien.getAuthorization(),true);//true để dk
+//        dkmh(nhom_to_mon_PLDC,sinh_vien.getAuthorization(),true);// false để hủy đk
     }
     private static void dkmh(Group nhom_to,String authorization,boolean isDK) throws IOException {
         String idMonHoc = nhom_to.getId_mon();
