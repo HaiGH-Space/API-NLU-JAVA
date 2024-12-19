@@ -78,7 +78,7 @@ List<FilteringCondition> dsDKLoc = api.dsDKLoc(authorization);
 
 #### Sử dụng dkmh bằng API liệu nhà trường có khóa không?
 
-Câu trả lời là không
+Câu trả lời là không.
 
 #### Project này có thu nhập dữ liệu cá nhân hay bất kì dữ liệu riêng tư nào không?
 
