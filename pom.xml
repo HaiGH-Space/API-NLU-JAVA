@@ -1,9 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.haigh</groupId>
-    <artifactId>api-nlu-java</artifactId>
-    <version>0.1.2-SNAPSHOT</version>
-    <packaging>jar</packaging>
+
+    <groupId>com.github.HaiGH-Space</groupId>
+    <artifactId>API-NLU-JAVA</artifactId>
+    <version>1.0.0</version>
+
     <properties>
         <github.username>HaiGH-Space</github.username>
         <github.repository>API-NLU-JAVA</github.repository>
@@ -34,12 +35,13 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
+    <distributionManagement>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/${github.username}/NLU-GUI</url>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/${github.username}/${github.repository}</url>
         </repository>
-    </repositories>
+    </distributionManagement>
     <scm>
         <connection>scm:git:https://github.com/${github.username}/${github.repository}.git</connection>
         <developerConnection>scm:git:https://github.com/${github.username}/${github.repository}.git</developerConnection>
