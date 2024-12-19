@@ -1,10 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.HaiGH-Space</groupId>
-    <artifactId>API-NLU-JAVA</artifactId>
+    <groupId>io.github.haigh-space</groupId>
+    <artifactId>api-nlu-java</artifactId>
     <version>1.0.0</version>
-
+    <name>API for NLU</name>
+    <description>This is api</description>
+    <url>https://github.com/HaiGH-Space/API-NLU-JAVA</url>
     <properties>
         <github.username>HaiGH-Space</github.username>
         <github.repository>API-NLU-JAVA</github.repository>
@@ -25,27 +27,89 @@
     </dependencies>
     <build>
         <plugins>
+<!--            <plugin>-->
+<!--                <groupId>org.sonatype.central</groupId>-->
+<!--                <artifactId>central-publishing-maven-plugin</artifactId>-->
+<!--                <version>0.6.0</version>-->
+<!--                <extensions>true</extensions>-->
+<!--                <configuration>-->
+<!--                    <publishingServerId>central</publishingServerId>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.5.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                </configuration>
+            </plugin>
+
+            <!--            javadoc-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>3.0.0-M1</version>
-                <configuration>
-                    <tagNameFormat>@{project.version}</tagNameFormat>
-                </configuration>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--            source-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--            pom, .asc-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/${github.username}/${github.repository}</url>
-        </repository>
-    </distributionManagement>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>HaiGH</name>
+            <email>nthai0932169055@gmail.com</email>
+        </developer>
+    </developers>
     <scm>
-        <connection>scm:git:https://github.com/${github.username}/${github.repository}.git</connection>
-        <developerConnection>scm:git:https://github.com/${github.username}/${github.repository}.git</developerConnection>
-        <url>https://github.com/${github.username}/${github.repository}</url>
-      <tag>HEAD</tag>
-  </scm>
+        <connection>scm:git:git://github.com/HaiGH-Space/API-NLU-JAVA.git</connection>
+        <developerConnection>scm:git:ssh://github.com:HaiGH-Space/API-NLU-JAVA.git</developerConnection>
+        <url>http://github.com/HaiGH-Space/API-NLU-JAVA/tree/main</url>
+    </scm>
 </project>
