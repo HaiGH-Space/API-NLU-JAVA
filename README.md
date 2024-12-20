@@ -107,7 +107,7 @@ Câu trả lời là không, bạn chạy trên local của chính bạn không 
 - **Libraries and Tools**: 
   - [OKHttp](https://square.github.io/okhttp/) - Thư viện HTTP client cho việc giao tiếp mạng.
   - [Gson](https://github.com/google/gson) - Thư viện chuyển đổi giữa Java Objects và JSON.
-- **Tài nguyên**: 
+- **Resources**: 
   - [OKHttp guide](https://square.github.io/okhttp/) - Tài liệu hướng dẫn sử dụng OKHttp.
   - [Gson guide](https://github.com/google/gson/wiki) - Tài liệu chi tiết về Gson.
 
