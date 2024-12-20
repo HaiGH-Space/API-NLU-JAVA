@@ -59,6 +59,7 @@ dependencies {
   implementation 'io.github.haigh-space:api-nlu-java:1.0.0'
 }
 ```
+[More dependency](https://central.sonatype.com/artifact/io.github.haigh-space/api-nlu-java/dependencies)
 ## Usage
 Trước tiên hãy bắt đầu với việc tạo lớp API để gọi các API cần thiết.
 ```java
