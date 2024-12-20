@@ -39,15 +39,27 @@ Clone project này về.
 
 - Khởi động test: `javac Test.java`
 
-## Note
-Trước khi sử dụng các api, phải thực hiện api đăng nhập trước.
-Điền vào mssv và mật khẩu vào hàm login, hàm này sẽ trả về sinh viên nếu đăng nhập thành công.
+> [!NOTE]\
+> Trước khi sử dụng các api, phải thực hiện api đăng nhập trước.
+> Điền vào mssv và mật khẩu vào hàm login, hàm này sẽ trả về sinh viên nếu đăng nhập thành công.
 
+## Using Dependency
+### Maven
 
-
-
+```xml
+<dependency>
+    <groupId>io.github.haigh-space</groupId>
+    <artifactId>api-nlu-java</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+### Gradle
+```gradle
+dependencies {
+  implementation 'io.github.haigh-space:api-nlu-java:1.0.0'
+}
+```
 ## Usage
-
 Trước tiên hãy bắt đầu với việc tạo lớp API để gọi các API cần thiết.
 ```java
 API api = new API();
